@@ -1,18 +1,22 @@
 {% extends 'basic.html' %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
 {% block title %}
 Lobby
 {% endblock %}
 
 {% block body %}
-<h1>Welcome to the lobby</h1>
-<div>
+<h1 class="tittle">Welcome to the lobby</h1>
+<div class="username">
 	<label for="username">Username</label>
 	<input type="text" id="username" placeholder="Enter your username">
 </div>
-<div>
+<div class="room_id">
 	<label for="room">Room id</label>
 	<input type="text" id="room" placeholder="Enter room id">
 </div>
-<button type="submit">Submit</button>
+<button class="button" type="submit">Submit</button>
 {% endblock %}
