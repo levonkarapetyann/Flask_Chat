@@ -1,5 +1,18 @@
 {% extends 'basic.html' %}
 
 {% block title %}
-Chat Raspberry
+Lobby
+{% endblock %}
+
+{% block body %}
+<h1>Welcome to the lobby</h1>
+<div>
+	<label for="username">Username</label>
+	<input type="text" id="username" placeholder="Enter your username">
+</div>
+<div>
+	<label for="room">Room id</label>
+	<input type="text" id="room" placeholder="Enter room id">
+</div>
+<button type="submit">Submit</button>
 {% endblock %}
