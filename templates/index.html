@@ -10,15 +10,17 @@ Lobby
 
 {% block body %}
 <h1 class="tittle">Welcome to the lobby</h1>
-<div class="username">
-	<label for="username">Username</label>
-	<input type="text" id="username" placeholder="Enter your username">
-</div>
-<div class="room_id">
+<form action="/chat">
+    <div class="username">
+    	<label for="username">Username</label>
+	<input type="text" id="username" name="username" placeholder="Enter your username">
+    </div>
+    <div class="room_id">
 	<label for="room">Room id</label>
-	<input type="text" id="room" placeholder="Enter room id">
-</div>
-<div class="button">
+	<input type="text" id="room" name="room" placeholder="Enter room id">
+    </div>
+    <div class="button">
        <button type="submit">Submit</button>
-</div>
+    </div>
+</form>
 {% endblock %}
