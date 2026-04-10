@@ -1,0 +1,14 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Raspberry Chat
+{% endblock %}
+
+{% block body %}
+<h1>Chat room: {{ room }}</h1>
+<div id="msg"></div>
+<form>
+   <input type="text" placeholder="Enter your message">
+   <button type="submit">Send</button>
+</form>
+{% endblock %}
