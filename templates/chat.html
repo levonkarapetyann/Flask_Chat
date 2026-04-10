@@ -12,3 +12,16 @@ Raspberry Chat
    <button type="submit">Send</button>
 </form>
 {% endblock %}
+
+{% block script %}
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script>
+   const socket = io();
+   socket.on('connect', function () {
+      socket.emit('join_room', {
+         username: "{{ username }}",
+         room: "{{ room }}"
+      });
+   });
+</script>
+{% endblock %}
