@@ -1,4 +1,57 @@
+body {
+   background-color: #FFDAB9;
+}
 .tittle {
     display: grid;
     place-items: center;
+    position: relative;
+    top: 100px;
+    font-size: 70px;
+}
+
+.username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #FF1493;
+    position: relative;
+    top: 150px;
+    gap: 20px;
+}
+
+.username input {
+   border: 2px solid #000000;
+   border-radius: 10px;
+   font-size: 20px;
+}
+
+.room_id input {
+     border: 2px solid #000000;
+     border-radius: 10px;
+     font-size: 20px;
+}
+
+.room_id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 40px;
+    color: #FF1493;
+    position: relative;
+    top: 170px;
+}
+
+.button button {
+   font-size: 30px;
+   position: relative;
+   top: 250px;
+   padding: 15px 30px;
+   border-radius: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
 }
