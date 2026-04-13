@@ -7,8 +7,8 @@ Raspberry Chat
 {% block body %}
 <h1>Chat room: {{ room }}</h1>
 <div id="msg"></div>
-<form>
-   <input type="text" placeholder="Enter your message">
+<form id="msg_send_form">
+   <input type="text" id="msg_send" placeholder="Enter your message">
    <button type="submit">Send</button>
 </form>
 {% endblock %}
@@ -22,6 +22,35 @@ Raspberry Chat
          username: "{{ username }}",
          room: "{{ room }}"
       });
+
+      let msg_send = document.getElementById('msg_send');
+      document.getElementById('msg_send_form').onsubmit = function (e) {
+          e.preventDefault();
+	  let cat = msg_send.value.trim();
+	  if (cat.length) {
+	      socket.emit('send', {
+	         username: "{{ username }}",
+		 room: "{{ room }}",
+		 message: cat
+	      }) 
+	  } 
+	  msg_send.value = '';
+	  msg_send.focus();
+      } 
+   });
+
+   socket.on('give_msg', function (data) {
+      console.log(data);
+      const zametka = document.createElement('div');
+      zametka.innerHTML = `<b>${data.username}:</b> ${data.message}`;
+      document.getElementById('msg').appendChild(zametka);
+   });
+
+   socket.on('join_room_notification', function (data) {
+      console.log(data)
+      const join = document.createElement('div')
+      join.innerHTML = `<b>${data.username}</b> has joined chat`
+      document.getElementById('msg').appendChild(join);
    });
 </script>
 {% endblock %}
