@@ -28,7 +28,7 @@ def handle_send(data):
 def handle_join_room(data):
     app.logger.info("{} joined the room: {}".format(data['username'], data['room']))
     join_room(data['room'])
-    socketio.emit('join_room_notification', data)
+    socketio.emit('join_room_notification', data, room=data['room'])
 
 if __name__ == "__main__":
     socketio.run(app, host="0.0.0.0", port=5000, debug=True)
