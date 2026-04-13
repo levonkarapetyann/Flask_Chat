@@ -4,10 +4,14 @@
 Raspberry Chat
 {% endblock %}
 
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+{% endblock %}
+
 {% block body %}
 <h1>Chat room: {{ room }}</h1>
-<div id="msg"></div>
-<form id="msg_send_form">
+<div  id="msg"></div>
+<form class="input"" id="msg_send_form">
    <input type="text" id="msg_send" placeholder="Enter your message">
    <button type="submit">Send</button>
 </form>
