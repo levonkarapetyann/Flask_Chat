@@ -1,7 +1,8 @@
 h1 {
     color: #4B0082;
     display: grid;
-    place-items: center;
+    justify-content: center;
+    box-shadow: 2 5px 5px grey;
 }
 
 body {
@@ -12,8 +13,60 @@ body {
     grid-template-rows: 1fr auto;
 }
 
-.input {
-   margin: 45px;
-   text-align: center;
-   gap: 25px;
+#msg_send_form {
+   display: flex;
+   gap: 20px;
+   padding: 20px;
+   justify-content: center;
+}
+
+#msg_send {
+   padding: 12px;
+   font-size: 16px;
+}
+
+#msg_send_form button {
+   padding: 12px 24px;
+   font-size: 16px;
+}
+
+
+input[type="text"] {
+  border: 2px solid #4682B4;
+  border-radius: 15px;
+}
+
+button {
+  border: 2px solid #4682B4;
+  border-radius: 15px;
+}
+
+.zametka {
+   color: #2C3E50;
+   box-shadow: 0 2px 5px grey;
+   display: block;
+   font-size: 25px;
+   width: fit-content;
+   margin: 15px;
+   border-radius: 15px;
+   padding: 10px
+}
+
+.join {
+  display: block;
+  width: fit-content;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 5px;
+  box-shadow: 2px 5px 5px #DAA520;
+  border-radius: 5px
+}
+
+#not {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
