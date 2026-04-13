@@ -9,6 +9,7 @@ Raspberry Chat
 {% endblock %}
 
 {% block body %}
+<div id="not"></div>
 <h1>Chat room: {{ room }}</h1>
 <div  id="msg"></div>
 <form class="input"" id="msg_send_form">
@@ -46,6 +47,7 @@ Raspberry Chat
    socket.on('give_msg', function (data) {
       console.log(data);
       const zametka = document.createElement('div');
+      zametka.classList.add('zametka');
       zametka.innerHTML = `<b>${data.username}:</b> ${data.message}`;
       document.getElementById('msg').appendChild(zametka);
    });
@@ -53,8 +55,9 @@ Raspberry Chat
    socket.on('join_room_notification', function (data) {
       console.log(data)
       const join = document.createElement('div')
-      join.innerHTML = `<b>${data.username}</b> has joined chat`
-      document.getElementById('msg').appendChild(join);
+      join.classList.add('join')
+      join.innerHTML = `<b>${data.username}</b> has joined chat<br>`
+      document.getElementById('not').appendChild(join);
    });
 </script>
 {% endblock %}
