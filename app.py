@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from flask_socketio import SocketIO, join_room, send
 
 app = Flask(__name__)
-socketio = SocketIO(app, async_mode='threading')
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 @app.route('/lobby')
 @app.route('/')
@@ -31,4 +31,4 @@ def handle_join_room(data):
     socketio.emit('join_room_notification', data)
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
