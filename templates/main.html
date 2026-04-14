@@ -1,0 +1,36 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Sign-in
+{% endblock %}
+
+{% block stylesheet %}
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sign_in.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+   <h1>Login</h1>
+   <form action="/chat.html">
+       <div class="input-box">
+          <label for="Username">Username</label>
+          <input type="text" id="Username" name="username" placeholder="Enter your username" required> 
+          <i class='bx bxs-user-circle'></i>
+       </div>
+       <div class="input-box">
+          <label for="Password">Password</label>
+          <input type="text" id="Password" name="password" placeholder="Enter your password" required>
+          <i class='bx bxs-lock-alt' ></i>
+       </div>
+       <div class="remember">
+          <label for=""><input type="checkbox">Remember me</label>
+          <a href="#">Forgot password?</a>
+       </div>
+       <button type="submit">Login</button>
+       <div class="registre">
+           <p>No account <a href="#">Registre</a></p>
+       </div>
+   </form>
+</div>
+{% endblock %}
