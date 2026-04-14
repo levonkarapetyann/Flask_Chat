@@ -9,13 +9,17 @@ Raspberry Chat
 {% endblock %}
 
 {% block body %}
-<div id="not"></div>
-<h1>Chat room: {{ room }}</h1>
-<div  id="msg"></div>
-<form class="input"" id="msg_send_form">
-   <input type="text" id="msg_send" placeholder="Enter your message">
-   <button type="submit">Send</button>
-</form>
+<div class="all_chat">
+    <h1>Chat room: {{ room }}</h1>
+    <div id="not_chat_window">
+         <div id="not"></div>
+         <div id="msg"></div>
+    </div>
+    <form class="input"" id="msg_send_form">
+          <input type="text" id="msg_send" placeholder="Enter your message">
+          <button type="submit">Send</button>
+    </form>
+</div>
 {% endblock %}
 
 {% block script %}
@@ -49,7 +53,10 @@ Raspberry Chat
       const zametka = document.createElement('div');
       zametka.classList.add('zametka');
       zametka.innerHTML = `<b>${data.username}:</b> ${data.message}`;
-      document.getElementById('msg').appendChild(zametka);
+      const msgSave = document.getElementById('msg');
+      msgSave.appendChild(zametka);
+      const chatWindows = document.getElementById('not_chat_window')
+      chatWindows.scrollTop = chatWindows.scrollHeight;
    });
 
    socket.on('join_room_notification', function (data) {
