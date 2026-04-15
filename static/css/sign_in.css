@@ -60,7 +60,7 @@ body {
 .input-box i {
    position: absolute;
    right: 20px;
-   top: 50%;
+   top: 80%;
    transform: translateY(-50%);
    font-size: 20px;
 }
@@ -116,3 +116,38 @@ body {
     text-decoration: underline;
     color: green;
 }
+
+button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Легкая тень */
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Плавность анимации */
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #f0f0f0; /* Чуть сереет */
+    transform: translateY(-2px); /* Кнопка слегка «всплывает» */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /* Тень становится глубже */
+}
+
+
+.remember a {
+    text-decoration: none;
+    color: white;
+}
+
+.remember {
+    margin-top: 40px !important;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
