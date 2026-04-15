@@ -1,0 +1,170 @@
+rt url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popins" sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../img/11.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.wrapper {
+    width: 400px;
+    backdrop-filter: blur(40px);
+    height: auto;
+    max-height: 95vh;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0px 30px;
+    border: 3px solid rgb(255, 255, 255, .2);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 30px 0px;
+    position: relative;
+}
+
+.input-box input {
+   width: 100%;
+   height: 50px;
+   background: transparent;
+   border: none;
+   outline: none;
+   border: 2px solid rgb(255, 255, 255, .2);
+   border-radius: 40px;
+   font-size: 20px;
+   color: white;
+   padding: 20px 65px 20px 30px;
+   box-sizing: border-box;
+}
+
+.input-box input::placeholder {
+   font-size: 15px;
+   color: white;
+}
+
+.input-box i {
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   bottom: 25px;
+   top: 100%;
+   transform: translateY(-50%);
+   font-size: 20px;
+}
+
+a {
+   text-decoration: none;
+}
+
+.wrapper .btn {
+   width: 100%;
+   height: 45px;
+   background: white;
+   outline: none;
+   border: none;
+   border-radius: 40px;
+   box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+   cursor: pointer;
+   font-size: 16px;
+   color: #333;
+   font-weight: 600;
+}
+
+.wrapper .have {
+   font-size: 16px;
+   text-align: center;
+   margin-top: 70px;
+}
+
+.have p a {
+   color: white;
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.have p a:hover {
+   text-decoration: underline;
+   color: green;
+}
+
+
+
+button {
+   font-size: 20px;
+   border-radius: 10px;
+   display: block;
+   max-width: 200px;
+   margin-top: 30px;
+   cursor: pointer;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.have a {
+   margin-left: 15px;
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
+   font-weight: 700;
+}
+
+.have p {
+   font-size: 20px;
+}
+
+body html {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Легкая тень */
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Плавность анимации */
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #f0f0f0; /* Чуть сереет */
+    transform: translateY(-2px); /* Кнопка слегка «всплывает» */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3); /* Тень становится глубже */
+}
