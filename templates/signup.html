@@ -1,0 +1,42 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+Signup
+{% endblock %}
+
+{% block stylesheet %}
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <h1>Signup</h1>
+    <form action="">
+        <div class="input-box">
+           <label class="lb-user" for="Username">Username</label>
+           <input type="text" id="Username" name="username_reg" placeholder="Create your username">
+           <i class='bx bxs-user-circle'></i>
+        </div>
+        <div class="input-box">
+           <label class="lb-email" for="Email">Email</label>
+           <input type="email" id="Email" name="Email-reg" placeholder="Enteer your email">
+           <i class='bx bxs-envelope' ></i>
+        </div>
+        <div class="input-box">
+           <label class="lb-pass" for="Password">Password</label>
+           <input type="password" id="Password" name="password-reg" placeholder="Create password">
+           <i class='bx bx-lock-alt' ></i>
+        </div>
+        <div class="input-box">
+           <label class="lb-repet" for="Repet password">Confirm your password</label>
+           <input type="password" id="Repet password" name="repet-pass" placeholder="PLease cofirm your password">
+           <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <button type="submit">Register</button>
+        <div class="have">
+           <p>Have account<a href="#">Login</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}
