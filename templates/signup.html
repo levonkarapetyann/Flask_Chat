@@ -12,7 +12,7 @@ Signup
 {% block body %}
 <div class="wrapper">
     <h1>Signup</h1>
-    <form action="">
+    <form action="{{ url_for('register') }}" method="POST">
         <div class="input-box">
            <label class="lb-user" for="Username">Username</label>
            <input type="text" id="Username" name="username_reg" placeholder="Create your username">
@@ -35,7 +35,7 @@ Signup
         </div>
         <button type="submit">Register</button>
         <div class="have">
-           <p>Have account<a href="#">Login</a></p>
+           <p>Have account<a href="main.html">Login</a></p>
         </div>
     </form>
 </div>
